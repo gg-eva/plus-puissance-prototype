@@ -33,9 +33,10 @@ public class MoveAvatar : MonoBehaviour {
     //DEDUCT ORIENTATION OF AVATAR WITH PATH
     //PATH ALSO USED FOR CAMERA
 
-    //Variables
+    //Components
     private Rigidbody rb;
 
+    //Variables
     private bool canDash;
     private bool dashing;
     private Vector3 dashTarget;

@@ -20,7 +20,9 @@ public enum XboxInputButton
     LeftBumper,
     RightBumper,
     BackButton,
-    StartButton
+    StartButton,
+    LeftStickClick,
+    RightStickClick
 }
 
 public static class InputsMapping
@@ -81,6 +83,12 @@ public static class InputsMapping
                 break;
             case XboxInputButton.StartButton:
                 keyCode = KeyCode.JoystickButton7;
+                break;
+            case XboxInputButton.LeftStickClick:
+                keyCode = KeyCode.JoystickButton8;
+                break;
+            case XboxInputButton.RightStickClick:
+                keyCode = KeyCode.JoystickButton9;
                 break;
         }
         return keyCode;
