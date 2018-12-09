@@ -48,6 +48,25 @@ public class Horde {
             creatures.Remove(creature);
     }
 
+    public MoveCreature PopNearest(Vector3 position)
+    {
+        float currentDistance = float.MaxValue;
+        MoveCreature currentCreature = null;
+
+        foreach (MoveCreature creature in creatures)
+        {
+            float distance = Mathf.Abs((creature.transform.position - position).magnitude);
+
+            if (currentDistance > distance)
+            {
+                currentDistance = distance;
+                currentCreature = creature;
+            }
+        }
+        RemoveCreature(currentCreature);
+        return currentCreature;
+    }
+
     public MoveCreature PopCreature ()
     {
         if (creatures.Count <= 0)

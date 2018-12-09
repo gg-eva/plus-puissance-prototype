@@ -82,7 +82,7 @@ public class CreatureManager : MonoBehaviour {
 
                 while (input_dispatch > 0 && input_regroup <= 0 && avatarHorde.Count() > 0)
                 {
-                    currentHorde.AddCreature(avatarHorde.PopCreature());
+                    currentHorde.AddCreature(avatarHorde.PopNearest(currentHorde.targetPosition));
                     yield return new WaitForSeconds(dispatchTimer);
                 }
 
