@@ -671,6 +671,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b225277496ddef49aa8df08f4dfb6bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  angleFactor: 60
+  angleSpeed: 3
 --- !u!54 &534669907
 Rigidbody:
   m_ObjectHideFlags: 0
