@@ -38,7 +38,7 @@ public class MoveCreature : MonoBehaviour {
     private NavMeshPath path;
     private int nextCornerIndex;
 
-	void Start () {
+    void Awake () {
         targetPosition = Vector3.zero;
         rb = GetComponent<Rigidbody>();
         path = new NavMeshPath();
