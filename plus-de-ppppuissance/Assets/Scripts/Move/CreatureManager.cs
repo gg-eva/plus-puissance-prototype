@@ -73,7 +73,7 @@ public class CreatureManager : MonoBehaviour {
             //Determining point on the ground
             RaycastHit hit;
             int layerMask = LayerMask.GetMask("Ground");
-            if(Physics.Raycast(go_selection.transform.position, Vector3.down, out hit, 20, layerMask))
+            if(Physics.Raycast(go_selection.transform.position, Vector3.down, out hit, 30, layerMask))
             {
                 dispatching = true;
                 currentHorde = new Horde();
