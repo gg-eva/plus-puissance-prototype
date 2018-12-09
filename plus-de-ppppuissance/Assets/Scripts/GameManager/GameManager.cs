@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
@@ -19,6 +20,11 @@ public class GameManager : MonoBehaviour {
         //    Debug.Log("InGameLoop");
         //if (gameStateMachine.currentState == GameState.GameMenu)
         //    Debug.Log("GameMenuLoop");
+        if (gameStateMachine.currentState == GameState.Restarting)
+        {
+            Scene scene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(scene.name);
+        }
         if (gameStateMachine.currentState == GameState.Exiting)
             Application.Quit();
 	}

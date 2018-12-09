@@ -60,7 +60,7 @@ public class MoveAvatar : MonoBehaviour {
 
         //Debug.Log("INPUT X " + input_forward);
         //Debug.Log("INPUT Y  " + input_right);
-        //Debug.Log("Speed " + Vector3.ProjectOnPlane(rb.velocity, transform.up).magnitude);
+        //Debug.Log("Speed " + Vector3.ProjectOnPlane(rb.velocity, Vector3.up).magnitude);
     }
 
     void InitDash()
@@ -79,7 +79,7 @@ public class MoveAvatar : MonoBehaviour {
 
     void Dash()
     {
-        Vector3 direction = Vector3.ProjectOnPlane(dashTarget - transform.position, transform.up);
+        Vector3 direction = Vector3.ProjectOnPlane(dashTarget - transform.position, Vector3.up);
         if (Mathf.Abs(direction.magnitude) > 0.1f)
         {
             Vector3 diffVelocity;
@@ -107,7 +107,7 @@ public class MoveAvatar : MonoBehaviour {
     void Move()
     {
         //Velocity on a plane
-        Vector3 diffVelocity = ComputeMoveVelocity() - Vector3.ProjectOnPlane(rb.velocity, transform.up);
+        Vector3 diffVelocity = ComputeMoveVelocity() - Vector3.ProjectOnPlane(rb.velocity, Vector3.up);
 
         rb.AddForce(acceleration * diffVelocity, ForceMode.VelocityChange);
     }

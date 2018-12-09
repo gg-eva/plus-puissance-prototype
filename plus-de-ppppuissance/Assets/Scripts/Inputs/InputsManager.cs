@@ -8,7 +8,7 @@ public class InputsManager : MonoBehaviour {
     GameManager gameManager;
     MoveAvatar moveAvatar;
     MoveSelection moveSelection;
-
+    CreatureManager creatureManager;
 
 	void Start () {
 
@@ -17,6 +17,7 @@ public class InputsManager : MonoBehaviour {
 
         GameObject go_avatar = GameObject.FindGameObjectWithTag("Player");
         moveAvatar = go_avatar.GetComponent<MoveAvatar>();
+        creatureManager = go_avatar.GetComponent<CreatureManager>();
 
         GameObject go_selection = GameObject.FindGameObjectWithTag("Selection");
         moveSelection = go_selection.GetComponent<MoveSelection>();
@@ -34,5 +35,8 @@ public class InputsManager : MonoBehaviour {
         moveSelection.input_lock = Input.GetKeyDown(InputsMapping.Button(XboxInputButton.RightStickClick));
         moveSelection.input_forward = Input.GetAxis(InputsMapping.Axis(XboxInputAxis.RightStickY));
         moveSelection.input_right = Input.GetAxis(InputsMapping.Axis(XboxInputAxis.RightStickX));
+
+        creatureManager.input_dispatch = Input.GetAxis(InputsMapping.Axis(XboxInputAxis.RightTrigger));
+        creatureManager.input_regroup = Input.GetAxis(InputsMapping.Axis(XboxInputAxis.LeftTrigger));
     }
 }

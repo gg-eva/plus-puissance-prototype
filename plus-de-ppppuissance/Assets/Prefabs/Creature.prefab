@@ -38,9 +38,10 @@ GameObject:
   - component: {fileID: 4747653975624758}
   - component: {fileID: 54067663358646896}
   - component: {fileID: 136649605172953716}
+  - component: {fileID: 114240611239135518}
   m_Layer: 0
   m_Name: Creature
-  m_TagString: Untagged
+  m_TagString: Creature
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -273,8 +274,26 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &114240611239135518
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1731220991669394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2113717bf8b49dc4c91780045fca620e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  acceleration: 0.1
+  velocityMax: 5
+  scopeAvatar: 1.92
+  scopeOthers: 2.34
+  repulsionFactorAvatar: 2.5
+  repulsionFactorOthers: 2.11
+  targetPosition: {x: 0, y: 0, z: 0}
 --- !u!136 &136649605172953716
 CapsuleCollider:
   m_ObjectHideFlags: 1

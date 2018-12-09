@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 54425285694238742}
   - component: {fileID: 136685898421334418}
   - component: {fileID: 114451745970984046}
+  - component: {fileID: 114015450513678646}
   m_Layer: 0
   m_Name: Avatar
   m_TagString: Player
@@ -276,6 +277,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &114015450513678646
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1566926078315372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 057becee86897624998afcb44793a4f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dispatchTimer: 0.5
+  regroupTimer: 0.8
+  updateAvatarHordeTimer: 0.2
+  input_dispatch: 0
+  input_regroup: 0
 --- !u!114 &114451745970984046
 MonoBehaviour:
   m_ObjectHideFlags: 1
